@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem Statements</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.problem {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Add additional styling as needed */
+
+  </style>
+</head>
+<body>
+
+  <h1>Problem Statements</h1>
+
+  <!-- Renewable Energy Optimization Algorithm Development Overlay -->
+  <div class="overlay" id="renewable_energy_overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeOverlay('renewable_energy_overlay')">+</span>
+      <h2>Renewable Energy Optimization Algorithm Development</h2>
+      <p><strong>Background:</strong> The United Nations Sustainable Development Goal 7 (SDG 7) aims to ensure access to affordable, reliable, sustainable, and modern energy for all...</p>
+      <p><strong>Problem Statement:</strong> Participants need to create easy-to-use algorithms or software that make the most of renewable energy within current energy systems...</p>
+      <p><strong>Preferred Level of Coding:</strong> We want practical solutions! Participants should focus on coding real-world solutions using programming languages and tools...</p>
+      <p><strong>Leveraging Talent:</strong> Fostering Collaboration for Sustainable Development...</p>
+    </div>
+  </div>
+
+  <!-- Leveraging Talent Overlay -->
+  <div class="overlay" id="talent_overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeOverlay('talent_overlay')">+</span>
+      <h2>Leveraging Talent: Fostering Collaboration for Sustainable Development</h2>
+      <p><strong>Background:</strong> In alignment with Sustainable Development Goal 8 (SDG 8) - Decent Work and Economic Growth, our college community harbors a wealth of diverse talents and expertise...</p>
+      <p><strong>Problem Statement:</strong> To address this challenge, we seek to develop a digital platform tailored to our college community, aimed at aggregating and showcasing the diverse talents and expertise present within...</p>
+      <p><strong>Challenges:</strong> Identification and Profiling, User Engagement, Privacy and Security, Technical Integration, Sustainability...</p>
+    </div>
+  </div>
+
+  <!-- AgriConnect Overlay -->
+  <div class="overlay" id="agricontact_overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeOverlay('agricontact_overlay')">+</span>
+      <h2>AgriConnect: Empowering Farmers for Sustainable Agriculture</h2>
+      <p><strong>Background:</strong> Small-scale farmers often face numerous challenges related to crop selection, fertilization, harvesting, weather variability, soil and pest management, and access to financial services...</p>
+      <p><strong>Problem Statement:</strong> Develop a comprehensive digital platform, AgriConnect, to assist local farmers in making informed decisions regarding crop selection, fertilization techniques, harvesting practices, weather monitoring, soil and pest management, and accessing financial services...</p>
+      <p><strong>Challenges:</strong> Crop Selection and Management, Fertilization and Soil Management, Harvesting and Post-Harvest Management, Weather Monitoring and Forecasting, Pest and Disease Management, Financial Services Access...</p>
+    </div>
+  </div>
+
+  <!-- Urban Transportation Infrastructure Overlay -->
+  <div class="overlay" id="transportation_overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeOverlay('transportation_overlay')">+</span>
+      <h2>Enhancing Urban Transportation Infrastructure for Sustainable Development (SDG 9)</h2>
+      <p><strong>Background:</strong> Transportation infrastructure plays a pivotal role in the socio-economic development of nations...</p>
+      <p><strong>Problem Statement:</strong> The problem at hand is the inefficiency and environmental impact of urban transportation infrastructure in many developing countries...</p>
+      <p><strong>Challenges:</strong> Outdated Infrastructure, Environmental Impact, Accessibility, Funding Constraints, Regulatory Hurdles...</p>
+    </div>
+  </div>
+
+  <!-- Remote Hilly Areas and Urban Markets Overlay -->
+  <div class="overlay" id="remote_overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeOverlay('remote_overlay')">+</span>
+      <h2>Bridging the Gap Between Remote Hilly Areas and Urban Markets</h2>
+      <p><strong>Background:</strong> In remote hilly areas, access to even the most basic commodities can be challenging due to the lack of nearby markets...</p>
+      <p><strong>Problem Statement:</strong> The challenge is to develop a solution that facilitates the efficient procurement of goods from urban markets to remote hilly areas, ensuring affordability, speed, and convenience for the residents...</p>
+      <p><strong>Challenges:</strong> Transportation Logistics, Affordability, Speed of Service, User Interface...</p>
+    </div>
+  </div>
+
+  <!-- Problem Statement Links -->
+  <div class="problem" onclick="openOverlay('renewable_energy_overlay')">Renewable Energy Optimization Algorithm Development</div>
+  <div class="problem" onclick="openOverlay('talent_overlay')">Leveraging Talent: Fostering Collaboration for Sustainable Development</div>
+  <div class="problem" onclick="openOverlay('agricontact_overlay')">AgriConnect: Empowering Farmers for Sustainable Agriculture</div>
+  <div class="problem" onclick="openOverlay('transportation_overlay')">Enhancing Urban Transportation Infrastructure for Sustainable Development (SDG 9)</div>
+  <div class="problem" onclick="openOverlay('remote_overlay')">Bridging the Gap Between Remote Hilly Areas and Urban Markets</div>
+
+  <script>
+    function openOverlay(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeOverlay(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+  </script>
+</body>
+</html>

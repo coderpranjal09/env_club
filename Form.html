@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose your statement</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+            font-family: "Poppins", sans-serif !important;
+            background-image: url('https://www.sih.gov.in/img1/software-result-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 60vw;
+            /* Adjusted max-width for responsiveness */
+            margin: 50px auto;
+        }
+
+        h1,
+        h2 {
+            /* font-size: 1px; */
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            font-family: "Poppins", sans-serif !important;
+
+            margin-top: 20px;
+        }
+
+        select,
+        input[type="text"],
+        input[type="email"],
+        input[type="submit"] {
+            font-family: "Poppins", sans-serif !important;
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #197561;
+            font-family: "Poppins", sans-serif;
+
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00b392;
+        }
+
+        .PS {
+            max-width: 90vw;
+            /* Adjusted max-width for responsiveness */
+            margin: 0 auto;
+            margin-bottom: 10px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            z-index: 9999;
+        }
+
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            .container {
+                max-width: 95vw;
+            }
+
+            .PS {
+                max-width: 95vw;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            input[type="submit"] {
+                padding: 8px 16px;
+            }
+        }
+
+        /*<---overlay style--->*/
+            .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            /* overflow-y: scroll; */
+        }
+            .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 90%;
+    /* Adjusted max-width for responsiveness */
+    width: 80%;
+    /* Set width to a percentage for responsiveness */
+    max-height: 90%;
+    /* Adjusted max-height for responsiveness */
+    overflow-y: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.problem {
+    cursor: pointer;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    /* Ensure long problem statements wrap properly */
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+    <div class="container">
+        <h1>Hackathon: Innovative Approaches to Reach Sustainable Development Goals</h1>
+        <div class="PS">
+            <h2> Problem Statements</h3>
+                <div class="overlay" id="renewable_energy_overlay">
+                    <div class="overlay-content">
+                        <span class="close-btn" onclick="closeOverlay('renewable_energy_overlay')">+</span>
+                        <h2>Renewable Energy Optimization Algorithm Development</h2>
+                        <p><strong>Background:</strong> The United Nations Sustainable Development Goal 7 (SDG 7) aims
+                            to ensure access to affordable, reliable, sustainable, and modern energy for all. However,
+                            millions of people around the world still lack access to clean and affordable energy
+                            sources, hindering socio-economic progress and exacerbating environmental issues.</p>
+                        <p><strong>Problem Statement:</strong> Participants need to create easy-to-use algorithms or
+                            software that make the most of renewable energy within current energy systems. They should
+                            focus on:</p>
+                        <ul>
+                            <li>Making renewables fit: Design algorithms that decide where to put solar panels, wind
+                                turbines, or hydro plants in the existing grid. The goal is to use these sources without
+                                overloading the system.</li>
+                            <li>Predicting energy: Build simple models that can forecast how much renewable energy we'll
+                                get based on weather forecasts and past data. This helps grid managers plan ahead.</li>
+                            <li>Storing and sharing power: Create algorithms that manage energy storage and sharing
+                                efficiently. They should ensure we use renewable energy first and prevent energy loss
+                                during distribution.</li>
+                            <li>Keeping the grid stable: Develop algorithms that help the grid stay stable even with
+                                variable renewable energy. They should be easy to implement and able to handle sudden
+                                changes in power flow.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Leveraging Talent Overlay -->
+                <div class="overlay" id="talent_overlay">
+                    <div class="overlay-content">
+                        <span class="close-btn" onclick="closeOverlay('talent_overlay')">+</span>
+                        <h2>Leveraging Talent: Fostering Collaboration for Sustainable Development</h2>
+                        <p><strong>Background:</strong> In alignment with Sustainable Development Goal 8 (SDG 8) -
+                            Decent Work and Economic Growth, our college community harbors a wealth of diverse talents
+                            and expertise. However, the efficient utilization of these resources remains a challenge.
+                            Often, individuals seeking specific skills or knowledge face hurdles in identifying and
+                            connecting with suitable collaborators or mentors. This inefficiency not only hampers
+                            productivity but also underutilizes the potential for collaborative endeavors and skill
+                            development within the community.</p>
+                        <p><strong>Problem Statement:</strong> To address this challenge, we seek to develop a digital
+                            platform tailored to our college community, aimed at aggregating and showcasing the diverse
+                            talents and expertise present within.</p>
+                        <p><strong>Challenges:</strong></p>
+                        <ul>
+                            <li>Identification and Profiling: Designing a system to effectively profile and categorize
+                                the wide array of talents and skills within the college community.</li>
+                            <li>User Engagement: Ensuring active participation and engagement from students, faculty,
+                                and staff to populate and maintain the platform.</li>
+                            <li>Privacy and Security: Implementing robust privacy measures to safeguard user data while
+                                still facilitating meaningful connections.</li>
+                            <li>Technical Integration: Integrating features such as skill profiles, project listings,
+                                messaging capabilities, and rating systems seamlessly into the platform.</li>
+                            <li>Sustainability: Developing a scalable and sustainable solution that can evolve with the
+                                changing needs and dynamics of the college community.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- AgriConnect Overlay -->
+                <div class="overlay" id="agricontact_overlay">
+                    <div class="overlay-content">
+                        <span class="close-btn" onclick="closeOverlay('agricontact_overlay')">+</span>
+                        <h2>AgriConnect: Empowering Farmers for Sustainable Agriculture</h2>
+                        <p><strong>Background:</strong> Small-scale farmers often face numerous challenges related to
+                            crop selection, fertilization, harvesting, weather variability, soil and pest management,
+                            and access to financial services. Addressing these challenges is essential for improving
+                            agricultural productivity, ensuring food security, and promoting sustainable livelihoods.
+                            Establishing a digital community platform can facilitate knowledge exchange,
+                            problem-solving, and resource-sharing among farmers, leading to enhanced agricultural
+                            practices and economic empowerment.</p>
+                        <p><strong>Problem Statement:</strong> Develop a comprehensive digital platform, AgriConnect, to
+                            assist local farmers in making informed decisions regarding crop selection, fertilization
+                            techniques, harvesting practices, weather monitoring, soil and pest management, and
+                            accessing financial services. The platform should serve as a collaborative space where
+                            farmers can share their challenges, exchange information, and seek advice from peers and
+                            experts in the agricultural domain.</p>
+                        <p><strong>Challenges:</strong></p>
+                        <ul>
+                            <li>Crop Selection and Management: Implement features that provide guidance on selecting
+                                suitable crops based on soil conditions, climate data, market demand, and farmers'
+                                preferences. Include tools for crop monitoring and management throughout the cultivation
+                                cycle.</li>
+                            <li>Fertilization and Soil Management: Offer recommendations for appropriate fertilization
+                                practices and soil health management techniques tailored to specific crop types and
+                                local soil conditions. Integrate soil testing and analysis functionalities to assess
+                                nutrient levels and soil health.</li>
+                            <li>Harvesting and Post-Harvest Management: Provide resources and best practices for
+                                efficient harvesting, storage, and post-harvest handling to minimize losses and maintain
+                                crop quality. Include information on value-added processing techniques to increase
+                                farmers' income opportunities.</li>
+                            <li>Weather Monitoring and Forecasting: Integrate weather forecasting tools and alerts to
+                                help farmers anticipate and mitigate the impact of adverse weather conditions on their
+                                crops. Offer insights into climate-resilient farming practices and risk management
+                                strategies.</li>
+                            <li>Pest and Disease Management: Incorporate pest and disease identification guides,
+                                monitoring systems, and pest control strategies to help farmers prevent and manage crop
+                                infestations effectively. Enable real-time reporting of pest outbreaks and facilitate
+                                knowledge-sharing on integrated pest management approaches.</li>
+                            <li>Financial Services Access: Facilitate access to financial services such as credit,
+                                insurance, and market information to support farmers' investment decisions, manage
+                                production risks, and enhance market linkages. Collaborate with financial institutions
+                                and agri-businesses to offer tailored financial products and services for farmers.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- Urban Transportation Infrastructure Overlay -->
+                <div class="overlay" id="transportation_overlay">
+                    <div class="overlay-content">
+                        <span class="close-btn" onclick="closeOverlay('transportation_overlay')">+</span>
+                        <h2>Enhancing Urban Transportation Infrastructure for Sustainable Development (SDG 9)</h2>
+                        <p><strong>Background:</strong> Transportation infrastructure plays a pivotal role in the socio-economic development of nations. However, many urban areas, particularly in developing countries, face significant challenges due to outdated transportation systems. These challenges include traffic congestion, air pollution, and inadequate accessibility, hindering economic growth and environmental sustainability. Sustainable Development Goal 9 emphasizes the importance of building resilient infrastructure, promoting inclusive and sustainable industrialization, and fostering innovation.</p>
+                        <p><strong>Problem Statement:</strong> The problem at hand is the inefficiency and environmental impact of urban transportation infrastructure in many developing countries. Outdated systems contribute to traffic congestion, air pollution, and limited accessibility, posing significant challenges to economic growth and environmental sustainability. Addressing these issues requires innovative solutions that leverage emerging technologies and align with the principles of Sustainable Development Goal 9.</p>
+                        <p><strong>Challenges:</strong></p>
+                        <ul>
+                          <li>Outdated Infrastructure: Many urban areas lack modern transportation systems, leading to congestion and inefficiencies.</li>
+                          <li>Environmental Impact: Transportation emissions contribute to air pollution and climate change, necessitating sustainable alternatives.</li>
+                          <li>Accessibility: Inadequate transportation infrastructure limits mobility, particularly for marginalized communities and persons with disabilities.</li>
+                          <li>Funding Constraints: Developing and implementing innovative transportation solutions require significant investment and resources.</li>
+                          <li>Regulatory Hurdles: Adapting new technologies and systems may face regulatory challenges and bureaucratic obstacles.</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+
+                <!-- Remote Hilly Areas and Urban Markets Overlay -->
+                <div class="overlay" id="remote_overlay">
+                    <div class="overlay-content">
+                        <span class="close-btn" onclick="closeOverlay('remote_overlay')">+</span>
+                        <h2>Bridging the Gap Between Remote Hilly Areas and Urban Markets</h2>
+                        <p><strong>Background:</strong> In remote hilly areas, access to even the most basic commodities can be challenging due to the lack of nearby markets. Residents often face difficulties in acquiring essential items promptly, as online services are impractical for smaller purchases and deliveries are often delayed due to the distance from urban centers.</p>
+                        <p><strong>Problem Statement:</strong> The challenge is to develop a solution that facilitates the efficient procurement of goods from urban markets to remote hilly areas, ensuring affordability, speed, and convenience for the residents. This solution should bridge the gap between supply and demand, enabling residents to access a wide range of products without the need to travel long distances or wait for extended delivery times.</p>
+                        <p><strong>Challenges:</strong></p>
+                        <ul>
+                          <li>Transportation Logistics: Transporting goods from urban markets to remote areas poses logistical challenges, especially considering the rugged terrain and limited infrastructure.</li>
+                          <li>Affordability: Ensuring that the cost of procurement remains reasonable for residents with varying income levels is essential for widespread adoption and sustainability.</li>
+                          <li>Speed of Service: Prompt delivery of goods is crucial to meet the immediate needs of residents and enhance their overall satisfaction with the service.</li>
+                          <li>User Interface: Developing an intuitive web or app interface that facilitates easy ordering, tracking, and payment for users with limited access to technology or internet connectivity is vital.</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="overlay" id="Miscellaneous">
+                    <div class="overlay-content">
+                        <span class="close-btn" onclick="closeOverlay('Miscellaneous')">+</span>
+                        <h2>Miscellaneous</h2>
+                        <p>Problem statement of your choice. </p>
+                        
+                    </div>
+                </div>
+                <p>
+                <div class="problem" onclick="openOverlay('renewable_energy_overlay')">1. Renewable Energy Optimization
+                    Algorithm Development</div>
+                </p>
+                <p>
+                <div class="problem" onclick="openOverlay('talent_overlay')">2. Leveraging Talent: Fostering
+                    Collaboration for Sustainable Development</div>
+                </p>
+                <p>
+                <div class="problem" onclick="openOverlay('agricontact_overlay')">3. AgriConnect: Empowering Farmers for
+                    Sustainable Agriculture</div>
+                </p>
+                <p>
+                <div class="problem" onclick="openOverlay('transportation_overlay')">4. Enhancing Urban Transportation
+                    Infrastructure for Sustainable Development (SDG 9)</div>
+                </p>
+                <p>
+                <div class="problem" onclick="openOverlay('remote_overlay')">5. Bridging the Gap Between Remote Hilly
+                    Areas and Urban Markets</div>
+                </p>
+                <p>
+                <div class="problem" onclick="openOverlay('Miscellaneous')">6. Miscellaneous</div>
+                </p>
+        </div>
+
+        <form method="post" autocomplete="off" name="google-sheet">
+            <h2>Team Details</h2>
+            <label for="Team Name">Team Name:</label><br>
+            <input type="text" id="teamName" name="Team Name" required><br><br>
+
+            <label for="Email">Email Address:</label><br>
+            <input type="email" id="email" name="Email" required><br><br>
+
+            <h2>Enter The Choices</h2>
+
+            <select name="Choice 1" required>
+                <option value="">Choose Ist choice</option>
+                <option value="1">Problem Statement 1</option>
+                <option value="2">Problem Statement 2</option>
+                <option value="3">Problem Statement 3</option>
+                <option value="4">Problem Statement 4</option>
+                <option value="5">Problem Statement 5</option>
+                <option value="6">Problem Statement 6</option>
+            </select>
+            <br><br>
+
+            <select name="Choice 2" required>
+                <option value="">Choose IInd choice</option>
+                <option value="1">Problem Statement 1</option>
+                <option value="2">Problem Statement 2</option>
+                <option value="3">Problem Statement 3</option>
+                <option value="4">Problem Statement 4</option>
+                <option value="5">Problem Statement 5</option>
+                <option value="6">Problem Statement 6</option>
+            </select>
+            <br><br>
+
+            <select name="Choice 3" required>
+                <option value="">Choose IIIrd choice</option>
+                <option value="1">Problem Statement 1</option>
+                <option value="2">Problem Statement 2</option>
+                <option value="3">Problem Statement 3</option>
+                <option value="4">Problem Statement 4</option>
+                <option value="5">Problem Statement 5</option>
+                <option value="6">Problem Statement 6</option>
+            </select>
+            <br><br>
+
+            <select name="Choice 4" required>
+                <option value="">Choose IVth choice</option>
+                <option value="1">Problem Statement 1</option>
+                <option value="2">Problem Statement 2</option>
+                <option value="3">Problem Statement 3</option>
+                <option value="4">Problem Statement 4</option>
+                <option value="5">Problem Statement 5</option>
+                <option value="6">Problem Statement 6</option>
+            </select>
+            <br><br>
+
+            <select name="Choice 5" required>
+                <option value="">Choose Vth choice</option>
+                <option value="1">Problem Statement 1</option>
+                <option value="2">Problem Statement 2</option>
+                <option value="3">Problem Statement 3</option>
+                <option value="4">Problem Statement 4</option>
+                <option value="5">Problem Statement 5</option>
+                <option value="6">Problem Statement 6</option>
+            </select>
+            <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <script>
+            const dropdowns = document.querySelectorAll('select');
+
+            dropdowns.forEach((dropdown, index) => {
+                dropdown.addEventListener('change', () => {
+                    const selectedOption = dropdown.value;
+
+                    dropdowns.forEach((otherDropdown, otherIndex) => {
+                        if (otherIndex > index) {
+                            const option = otherDropdown.querySelector(`option[value="${selectedOption}"]`);
+                            if (option) {
+                                option.disabled = true;
+                            }
+                        }
+                    });
+                });
+            });
+        </script>
+        <!-- <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwzhb_YmE__723Zk2H9mw81npFtcCgXnJRhDreni2KMjSJnXckM6M2xXw0-ao9VbUC5zQ/exec'
+            
+            const form = document.forms['google-sheet']
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                    .catch(error => alert("Some error occured."))
+            })
+
+        </script> -->
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwzhb_YmE__723Zk2H9mw81npFtcCgXnJRhDreni2KMjSJnXckM6M2xXw0-ao9VbUC5zQ/exec'
+            const form = document.forms['google-sheet'];
+            const loadingOverlay = document.querySelector('.loading-overlay');
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                // Show loading overlay
+                loadingOverlay.style.display = 'block';
+                // Disable submit button
+                const submitButton = form.querySelector('input[type="submit"]');
+                submitButton.disabled = true;
+
+                fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                    .then(response => {
+                        // Hide loading overlay
+                        loadingOverlay.style.display = 'none';
+                        // Enable submit button
+                        submitButton.disabled = false;
+                        // Show success message
+                        alert("Your response is submitted successfully! Alloted problem statement will be communicated to you soon via mail...");
+                    })
+                    .catch(error => {
+                        // Hide loading overlay
+                        loadingOverlay.style.display = 'none';
+                        // Enable submit button
+                        submitButton.disabled = false;
+                        // Show error message
+                        alert("Some error occurred.");
+                    });
+            });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            function openOverlay(id) {
+                document.getElementById(id).style.display = "block";
+            }
+
+            function closeOverlay(id) {
+                document.getElementById(id).style.display = "none";
+            }
+
+        </script>
+</body>
+
+</html>

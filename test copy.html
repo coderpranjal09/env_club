@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Team</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="footer.css">
+  <style>
+    body {
+      font-size: 18px;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f0fafc;
+      color: #003C43;
+    }
+    
+    .bg-color {
+      background-color: #135D66;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .bg-color .logo {
+      margin-right: auto;
+    }
+    
+    .bg-color h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    
+    h1 {
+      font-family: "Poppins", sans-serif;
+      font-size: 40px;
+      color: #4c7975;
+      font-weight: 500;
+      margin: 40px 0 20px;
+    }
+    
+    p {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    
+    .gallery {
+      width: 90%;
+      margin: 0 auto 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    
+    .random {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    
+    hr {
+      border: none;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.15);
+      margin: 40px 5%;
+    }
+    
+    .footer {
+      background-color: #135D66;
+      color: white;
+      padding: 20px 5%;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    
+    .footer .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    
+    .footer .social-icons .social-icon {
+      color: white;
+      font-size: 20px;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    
+    .footer .social-icons .social-icon:hover {
+      color: #f0fafc;
+    }
+    
+    .footer .footerText {
+      margin: 10px 0;
+    }
+    
+    .footer .mail {
+      color: #ffffffcc;
+      text-decoration: none;
+    }
+    
+    .footer .mail:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .bg-color {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .bg-color h2 {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+    
+      .footer {
+        padding: 15px 5%;
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class=" bg-color">
+    <a href="index.html" class="logo">
+      <img src="Assets/logo.png" alt="Logo" width="80" height="80" id="logo" style="margin-left: 100%;">
+    </a>
+    <h2 style="margin-left: 35%;">Enviroment Club</h2>
+  </div>
+  <h1>Photo Gallery</h1>
+  <p>Explore us</p>
+
+  <div class="gallery">
+    <img src="ImgGallery/image1.png" alt="Photo 1">
+    <img src="ImgGallery/image2.png" alt="Photo 2">
+    <img src="ImgGallery/image3.png" alt="Photo 3" class="random">
+    <img src="ImgGallery/image4.png" alt="Photo 4">
+    <img src="ImgGallery/image5.png" alt="Photo 5">
+    <img src="ImgGallery/image6.png" alt="Photo 6">
+    <img src="ImgGallery/image7.png" alt="Photo 7">
+    <img src="ImgGallery/image8.png" alt="Photo 1">
+    <img src="ImgGallery/image9.png" alt="Photo 2">
+    <img src="ImgGallery/image10.png" alt="Photo 3" class="random">
+    <img src="ImgGallery/image11.png" alt="Photo 4">
+    <img src="ImgGallery/image12.png" alt="Photo 5">
+    <img src="ImgGallery/image13.png" alt="Photo 6">
+    <img src="ImgGallery/image14.png" alt="Photo 7">
+    <img src="ImgGallery/IMG-20241114-WA0001.jpg" alt="Photo 8">
+    <img src="ImgGallery/IMG-20241114-WA0002.jpg" alt="Photo 9">
+    <img src="ImgGallery/IMG-20241114-WA0003.jpg" alt="Photo 10">
+    <img src="ImgGallery/IMG-20241114-WA0004.jpg" alt="Photo 11">
+    <img src="ImgGallery/IMG-20241114-WA0005.jpg" alt="Photo 12">
+    <img src="ImgGallery/IMG-20241114-WA0006.jpg" alt="Photo 13">
+    <img src="ImgGallery/IMG-20241114-WA0007.jpg" alt="Photo 14">
+    <img src="ImgGallery/IMG-20241114-WA0008.jpg" alt="Photo 15">
+    <img src="ImgGallery/IMG-20241114-WA0009.jpg" alt="Photo 16">
+    <img src="ImgGallery/IMG-20241114-WA0010.jpg" alt="Photo 17">
+    <img src="ImgGallery/IMG-20241114-WA0011.jpg" alt="Photo 18">
+    <img src="ImgGallery/IMG-20241114-WA0012.jpg" alt="Photo 19">
+    <img src="ImgGallery/IMG-20241114-WA0013.jpg" alt="Photo 20">
+    <img src="ImgGallery/IMG-20241114-WA0014.jpg" alt="Photo 21">
+    <img src="ImgGallery/IMG-20241114-WA0015.jpg" alt="Photo 22">
+    <img src="ImgGallery/IMG-20241114-WA0016.jpg" alt="Photo 23">
+    <img src="ImgGallery/IMG-20241114-WA0017.jpg" alt="Photo 24">
+    <img src="ImgGallery/IMG-20241114-WA0018.jpg" alt="Photo 25">
+    <img src="ImgGallery/IMG-20241114-WA0019.jpg" alt="Photo 26">
+    <img src="ImgGallery/IMG-20241114-WA0020.jpg" alt="Photo 27">
+    <img src="ImgGallery/IMG-20241114-WA0021.jpg" alt="Photo 28">
+    <img src="ImgGallery/IMG-20241114-WA0022.jpg" alt="Photo 29">
+    <img src="ImgGallery/IMG-20241114-WA0023.jpg" alt="Photo 30">
+    <img src="ImgGallery/IMG-20241114-WA0024.jpg" alt="Photo 31">
+    <img src="ImgGallery/IMG-20241114-WA0025.jpg" alt="Photo 32">
+    <img src="ImgGallery/IMG-20241114-WA0026.jpg" alt="Photo 33">
+    <img src="ImgGallery/IMG-20241114-WA0027.jpg" alt="Photo 34">
+    <img src="ImgGallery/IMG-20241114-WA0028.jpg" alt="Photo 35">
+    <img src="ImgGallery/IMG-20241114-WA0030.jpg" alt="Photo 36">
+    <img src="ImgGallery/IMG-20241114-WA0031.jpg" alt="Photo 37">
+    
+  </div>
+
+  <hr>
+  <footer class="footer">
+    <div class="social-icons">
+        <div class="icon1"> <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="icon2"> <a href="https://www.instagram.com/environment._.thdcihet?igsh=aml3ZGVzeHh5YXd0" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="" class="social-icon"><i
+                    class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Add more social media icons as needed -->
+    </div>
+    <div class="footerText">
+        Thank You For visiting us.
+
+    </div>
+    <div class="footerText" id="contact">
+        <a href="mailto:environmentclub@thdcihet.ac.in" class="mail">For support: environmentclub@thdcihet.ac.in</a>
+    </div>
+</footer>
+</body>
+
+</html>

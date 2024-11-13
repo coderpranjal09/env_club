@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Collage</title>
+  <style>
+    .gallery {
+      margin:  50px 10px 50px 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .random {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <img src="ImgGallery/image1.png" alt="Photo 1">
+    <img src="ImgGallery/image2.png" alt="Photo 2">
+    <img src="ImgGallery/image3.png" alt="Photo 3" class="random">
+    <img src="ImgGallery/image4.png" alt="Photo 4">
+    <img src="ImgGallery/image5.png" alt="Photo 5">
+    <img src="ImgGallery/image6.png" alt="Photo 6">
+    <img src="ImgGallery/image7.png" alt="Photo 7">
+    <img src="ImgGallery/image8.png" alt="Photo 1">
+    <img src="ImgGallery/image9.png" alt="Photo 2">
+    <img src="ImgGallery/image10.png" alt="Photo 3" class="random">
+    <img src="ImgGallery/image11.png" alt="Photo 4">
+    <img src="ImgGallery/image12.png" alt="Photo 5">
+    <img src="ImgGallery/image13.png" alt="Photo 6">
+    <img src="ImgGallery/image14.png" alt="Photo 7">
+    <!-- Add more images here -->
+  </div>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Collage</title>
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .horizontal {
+      width: 100%;
+    }
+    .vertical {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <div class="horizontal">
+      <img src="photo1.jpg" alt="Photo 1">
+      <img src="photo2.jpg" alt="Photo 2">
+    </div>
+    <div class="vertical">
+      <img src="photo3.jpg" alt="Photo 3">
+      <img src="photo4.jpg" alt="Photo 4">
+    </div>
+    <img src="photo5.jpg" alt="Photo 5">
+
+  </div>
+</body>
+</html> -->

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Team</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        body {
+            font-size: 18px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+            line-height: 28.8px;
+            text-align: center;
+            background-color: #e3fef75d;
+            color: #003C43;
+        }
+
+        .bg-color {
+            background-color: #135D66 !important;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 0 3px 0;
+        }
+
+        .gallery {
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .random {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: rgba(0, 0, 0, 0.36);
+            margin: 5% 10%;
+        }
+
+        h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: 40px;
+            color: #4c7975;
+            font-weight: 500;
+            line-height: 40px;
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .bg-color {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .gallery {
+                margin: 20px auto;
+            }
+
+            h2 {
+                margin-left: 0;
+            }
+
+            iframe {
+                width: 90%;
+                height: 400px; /* Adjust height as needed */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class=" bg-color">
+        <a href="index.html" class="logo">
+            <img src="Assets/logo.png" alt="Logo" width="80" height="80" id="logo" style="margin-left: 100%;">
+        </a>
+        <h2 style="margin-left: 35%;">Enviroment Club</h2>
+    </div>
+    <h1>Event Calender</h1>
+
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTqvJkWGuRtGMhjVfiZcelINGgxGOoeofo2J80XdolHO8-Kbtl7SM6GEJxJ6QO1WQ/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="550"  allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+    <hr>
+    <footer class="footer">
+        <div class="social-icons">
+            <div class="icon1"> <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="icon2"> <a href="https://www.instagram.com/environment._.thdcihet?igsh=aml3ZGVzeHh5YXd0"
+                    class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footerText">
+            Thank You For visiting us.
+        </div>
+        <div class="footerText" id="contact">
+            <a href="mailto:environmentclub@thdcihet.ac.in" class="mail">For support: environmentclub@thdcihet.ac.in</a>
+        </div>
+    </footer>
+</body>
+
+</html>

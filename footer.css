@@ -1,0 +1,45 @@
+.footer {
+
+    width: 100%;
+    background-color: #135c66ba;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    padding-bottom: 30px;
+    /* margin-top: 15px; */
+}
+
+.social-icons {
+    margin-top: 10px;
+
+}
+.icon1,.icon2{
+    display: inline;
+    padding: 0;
+    
+}
+
+.social-icon {
+
+    font-size: 24px;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    text-decoration: none;
+    color: rgb(73, 160, 120);
+    /* Green color on hover */
+}
+
+.footerText a {
+    color: white;
+}
+
+.footerText a:hover {
+    color: rgb(73, 160, 120);
+}
